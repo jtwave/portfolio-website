@@ -1,1 +1,133 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Sales Engineer Intern, Grand Slam I.T School</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/modern-template.css">
+    <style>
+        :root {
+            --primary-color: #8ebebc;
+            --secondary-color: #dce3e2;
+            --gradient-start: rgba(142, 190, 188, 0.1);
+            --gradient-end: rgba(220, 227, 226, 0.3);
+        }
+
+        /* Modern navigation with blur */
+        .nav-fixed {
+            position: fixed;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        /* Hero section styling */
+        .hero-section {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Highlight cards */
+        .highlight-card {
+            transition: transform 0.3s ease;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Skill tags */
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 20px;
+            background: var(--primary-color);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modern navigation buttons */
+        .nav-button {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateX(5px);
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            // ... responsive styles ...
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Fixed Navigation -->
+    <nav class="nav-fixed">
+        <!-- ... navigation content ... -->
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="../images/Grand_slam.jpg" alt="Grand Slam I.T School Logo" class="company-logo">
+            <h1>Pre-Sales Engineer Intern</h1>
+            <p class="date">December 2023 - January 2024</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div id="main">
+        <section class="experience-content">
+            <div class="highlight-card">
+                <p>During my internship at Grand Slam IT School, I played an instrumental role in creating proposal
+                    blueprints for integrated solutions, focusing on areas such as DevOps, cloud support, and AI. This
+                    experience allowed me to foster client relationships and generate 100+ leads by engaging with
+                    potential new clients through my professional network.</p>
+            </div>
+
+            <div class="highlight-card">
+                <p>I supported business operations by growing the client base and identifying target sales opportunities
+                    using Hubspot. This role also enhanced my skills in Javascript and Python, as I developed projects
+                    like a portfolio website and a Python calculator.</p>
+            </div>
+
+            <div class="skills-section">
+                <span class="skill-tag">DevOps</span>
+                <span class="skill-tag">Cloud Support</span>
+                <span class="skill-tag">AI</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HubSpot</span>
+            </div>
+
+            <p class="company-link">Mr. Ntaflos, my mentor/boss, was such a pleasure to work for and you can check out
+                his company <a href="https://grandslam-it.com/"> here.</a></p>
+
+            <footer class="navigation-buttons">
+                <a href="../#ProfessionalExperience" class="nav-button">← Back to Professional Experience</a>
+                <a href="cognizant.html" class="nav-button">Next Experience →</a>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
