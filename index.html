@@ -818,6 +818,252 @@
 		.about-image:hover {
 			transform: none;
 		}
+
+		/* About Section Styles */
+		.about-section {
+			padding: 60px 20px;
+			background-color: var(--alt-section-bg);
+		}
+
+		.about-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 15px;
+		}
+
+		.about-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 40px;
+		}
+
+		.about-image {
+			flex: 0 0 400px;
+		}
+
+		.about-image img {
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.about-text {
+			flex: 1;
+			max-width: 600px;
+		}
+
+		.about-text p {
+			margin-bottom: 20px;
+			line-height: 1.8;
+			color: var(--text-color);
+			font-size: 18px;
+		}
+
+		/* Responsive Design for About Section */
+		@media (max-width: 768px) {
+			.about-section {
+				padding: 40px 15px;
+			}
+
+			.about-container {
+				padding: 0;
+			}
+
+			.about-content {
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+			}
+
+			.about-text {
+				order: -1;
+				/* This moves the text above the image */
+				width: 100%;
+				max-width: none;
+				padding: 0 20px;
+			}
+
+			.about-image {
+				flex: none;
+				width: 100%;
+				max-width: 500px;
+				margin: 0 auto;
+			}
+
+			.about-text p {
+				font-size: 16px;
+				margin-bottom: 20px;
+				text-align: left;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.about-section {
+				padding: 30px 0;
+			}
+
+			.about-text {
+				padding: 0 20px;
+			}
+
+			.about-image {
+				width: 100%;
+				padding: 0 20px;
+				margin-top: 20px;
+			}
+
+			.about-text p {
+				font-size: 16px;
+				margin-bottom: 15px;
+			}
+		}
+
+		/* Contact Section Styles */
+		.contact-section {
+			padding: 6rem 2rem;
+			background: var(--section-bg);
+			position: relative;
+		}
+
+		.contact-section::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(135deg, rgba(44, 62, 80, 0.02) 0%, rgba(255, 255, 255, 0) 100%);
+			pointer-events: none;
+		}
+
+		.contact-form {
+			max-width: 600px;
+			margin: 0 auto;
+			background: var(--card-bg);
+			padding: 3rem;
+			border-radius: 20px;
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+			transform: translateY(0);
+			transition: all 0.3s ease;
+		}
+
+		.contact-form:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+		}
+
+		.form-group {
+			position: relative;
+			margin-bottom: 1.5rem;
+		}
+
+		.form-group input,
+		.form-group textarea {
+			width: 100%;
+			padding: 1rem;
+			border: 1px solid rgba(44, 62, 80, 0.1);
+			border-radius: 8px;
+			background: white;
+			color: var(--text-color);
+			font-size: 1rem;
+			transition: all 0.3s ease;
+		}
+
+		.form-group textarea {
+			min-height: 150px;
+			resize: vertical;
+			display: block;
+		}
+
+		.form-group label {
+			position: absolute;
+			left: 1rem;
+			top: 1rem;
+			color: #666;
+			font-size: 1rem;
+			pointer-events: none;
+			transition: opacity 0.2s ease;
+			z-index: 1;
+		}
+
+		.form-group input:focus+label,
+		.form-group textarea:focus+label,
+		.form-group input:not(:placeholder-shown)+label,
+		.form-group textarea:not(:placeholder-shown)+label {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.form-group input:focus,
+		.form-group textarea:focus {
+			border-color: var(--primary-color);
+			box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.1);
+			outline: none;
+		}
+
+		.submit-button {
+			width: 100%;
+			padding: 1rem;
+			background: var(--primary-color);
+			color: white;
+			border: none;
+			border-radius: 12px;
+			font-size: 1rem;
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.submit-button:hover {
+			background: var(--accent-color);
+			transform: translateY(-2px);
+		}
+
+		#successMessage {
+			margin-top: 1rem;
+			padding: 1rem;
+			border-radius: 12px;
+			background: rgba(72, 187, 120, 0.1);
+			color: #38a169;
+			text-align: center;
+			transform: translateY(10px);
+			opacity: 0;
+			transition: all 0.3s ease;
+		}
+
+		#successMessage.show {
+			transform: translateY(0);
+			opacity: 1;
+		}
+
+		/* Footer Styles */
+		footer {
+			background: #1a1a1a;
+			color: white;
+			padding: 2rem;
+			text-align: center;
+		}
+
+		.social-links {
+			display: flex;
+			justify-content: center;
+			gap: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.social-links a {
+			color: white;
+			font-size: 1.5rem;
+			transition: color 0.3s ease;
+		}
+
+		.social-links a:hover {
+			color: var(--primary-color);
+		}
 	</style>
 </head>
 
@@ -1049,21 +1295,23 @@
 
 	<!-- About Section -->
 	<section id="about" class="about-section">
-		<div class="about-grid">
-			<div class="about-image">
-				<img src="images/grad_photo.jpg" alt="John Taylor">
-			</div>
+		<div class="about-container">
+			<h2>About Me</h2>
 			<div class="about-content">
-				<h2>About Me</h2>
-				<p>Born and raised in Westchester, NY, I'm a passionate AI scientist and developer currently pursuing my
-					Computer Science degree at Binghamton University. My journey in technology began with a childhood
-					fascination with AI, inspired by movies like Toy Story.</p>
-				<p>Beyond coding, I'm an avid sports enthusiast, enjoying basketball, golf, tennis, and volleyball. I
-					believe in the power of physical activity as a form of meditation and the importance of maintaining
-					a balanced lifestyle.</p>
-				<p>My love for travel has taken me to amazing places, with Florence, Italy being one of my favorites.
-					These experiences have shaped my global perspective and approach to problem-solving in technology.
-				</p>
+				<div class="about-image">
+					<img src="images/grad_photo.jpg" alt="Profile Picture">
+				</div>
+				<div class="about-text">
+					<p>Born and raised in Westchester, NY, I'm a passionate AI scientist and developer currently
+						pursuing my Computer Science degree at Binghamton University. My journey in technology began
+						with a childhood fascination with AI, inspired by movies like Toy Story.</p>
+					<p>Beyond coding, I'm an avid sports enthusiast, enjoying basketball, golf, tennis, and volleyball.
+						I believe in the power of physical activity as a form of meditation and the importance of
+						maintaining a balanced lifestyle.</p>
+					<p>My love for travel has taken me to amazing places, with Florence, Italy being one of my
+						favorites. These experiences have shaped my global perspective and approach to problem-solving
+						in technology.</p>
+				</div>
 			</div>
 		</div>
 	</section>
