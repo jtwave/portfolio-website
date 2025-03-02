@@ -1,0 +1,236 @@
+<!-- About and Contact sections for portfolio website -->
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="about-container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/grad_photo.jpg" alt="Profile Picture">
+            </div>
+            <div class="about-text">
+                <p>My journey in technology began with a childhood fascination with AI, inspired by movies like Toy
+                    Story. This early interest has evolved into a passion for building innovative solutions and tackling
+                    complex problems in the field of artificial intelligence.</p>
+                <p>Beyond coding, I'm an avid sports enthusiast, enjoying basketball, golf, tennis, and volleyball. I
+                    believe in the power of physical activity as a form of balance in the tech-driven world we live in.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        <div class="contact-content">
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div id="success-message" style="display: none;">
+                Thank you for your message! I'll get back to you soon.
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* About Section Styles */
+    .about-section {
+        padding: 60px 20px;
+        background-color: #f8f9fa;
+    }
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .about-image {
+        flex: 0 0 400px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    .about-text p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+        color: #333;
+        font-size: 18px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+        color: #2c3e50;
+    }
+
+    /* Contact Section Styles */
+    .contact-section {
+        padding: 80px 20px;
+        background-color: #ffffff;
+    }
+
+    .contact-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-content {
+        margin-top: 40px;
+    }
+
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 150px;
+        resize: vertical;
+    }
+
+    .submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+    #success-message {
+        text-align: center;
+        color: #28a745;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 4px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 40px 15px;
+        }
+
+        .about-container {
+            padding: 0;
+        }
+
+        .about-content {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .about-image {
+            flex: none;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            width: 100%;
+            max-width: none;
+            padding: 0 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-section {
+            padding: 30px 0;
+        }
+
+        .about-image {
+            width: 100%;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+
+        .about-text {
+            padding: 0 20px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.75em;
+            margin-bottom: 25px;
+        }
+    }
+</style>
+
+<script>
+    // Contact Form Handling
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        // Here you would typically handle the form submission
+        // For now, we'll just show the success message
+        document.getElementById('contact-form').style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+    });
+</script>
